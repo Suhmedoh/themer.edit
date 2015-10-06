@@ -1,0 +1,15 @@
+# this yaml config file goes in .themer/templates/i3/config.yaml
+variables:
+  primary: magenta
+  secondary: green
+  tertiary: red
+  special: yellow
+  transparency: 85
+  fontName: terminus
+  fontSize: 12
+  font: "-*-terminus-*-*-*-*-12-*-*-*-*-*-*-*"
+files:
+  xresources.tpl: Xresources
+  index.tpl: index.html
+  i3status.tpl: i3status.conf
+  i3.tpl: i3.conf
