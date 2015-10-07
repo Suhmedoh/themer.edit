@@ -37,20 +37,35 @@ ln -s ~/.config/themer/current/i3status.conf ~/.i3status.conf
 
 
 #(eventual) to do list:
+
+
 generate themes for other tiling WMs(if possible?)
+
 generate themes for text editors (sublime, emacs, vim)
+
 generate themes for panels (tint2, i3status, pystatus)
+
 generate themes for dmenu and it's alternatives
+
 generate themes for irc clients
+
 generate stylish firefox css based off twily's(?)
+
 generate colorschemes for different terminals (termite, lilyterm, etc)
+
 generate color schemes for other popular apps( suggestions?)
 
+
 make it simpler
+
   auto symlink the config files(?)
 
+
 make it work for a wide variety of systems/WMs
+
   bspwm, awesome, dwm, etc? (need to see how their configs work) 
 
+
 make it easier for new users to tinker with their themes after making it
+
   output paths to files they would be interested in (.xresources, i3.conf)
