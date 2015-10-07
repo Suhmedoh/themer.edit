@@ -33,7 +33,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
  
 # start dmenu (a program launcher)
-bindsym $mod+d exec "dmenu_run -nb {{ black }} -nf {{ tertiary }} -sb {{ black }} -sf {{ secondary }}"
+bindsym $mod+d exec dmenu_run -b -nb '{{ secondary }}' -nf '{{ background }}' -sb '{{ background }}' -sf '{{ secondary }}'
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -158,7 +159,7 @@ set $warning {{ special }}
 # finds out, if available)
 bar {
     status_command    i3status
-    position          bottom
+    position          top
     workspace_buttons yes
     
     font {{ font }}

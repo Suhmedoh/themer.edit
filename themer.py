@@ -5,18 +5,12 @@ Theme generator/manager.
  
 Can generate themes from:
  
-- Xresources-style color files
-- Sweyla's site, e.g. for http://sweyla.com/themes/seed/693812/ -> 693812
-- Images, in which case it will use k-means to get colors
+- Images, it will use k-means to get colors
  
 Requires:
  
 - ~/.config/themer/templates/ directory w/one valid set of templates
  
-Assumes:
- 
-- you're using "any color you like" icon set
-- probably a lot of other things
 """
 
 from collections import namedtuple
@@ -174,13 +168,10 @@ def activate(theme_name):
     color_file = os.path.join(dest, 'colors.yaml')
     colors = CachedColorParser(color_file).read()
     wallfix(dest, colors)
-    # IconUpdater(colors['primary'], colors['secondary']).update_icons()
-    os.system('xrdb ~/.config/themer/%s/Xresources' % theme_name)
-    os.system('i3-msg exec -c ~/.config/themer/%s/i3.conf' % theme_name)
+    os.system('xrdb ~/.config/themer/current/Xresources')
     os.system('i3-msg -q restart')
 
-#def fetch_vim(color_file):
-#    return urllib2.urlopen('http://sweyla.com/themes/vim/sweyla%s.vim' % color_file).read()
+
 
 def generate(color_source, config_file, template_dir, theme_name):
     """Generate a new theme."""
@@ -188,14 +179,11 @@ def generate(color_source, config_file, template_dir, theme_name):
     wallpaper = None
     if color_source.isdigit() and not os.path.isfile(color_source):
         colors = SweylaColorParser(color_source).read()
-        #vim = fetch_vim(color_source)
     elif color_source.lower().endswith(('.jpg', '.png', '.jpeg')):
         colors = AutodetectColorParser(color_source).read()
         wallpaper = color_source
-        #vim = None
     else:
         colors = ColorParser(color_source).read()
-        #vim = None
     config = read_config(config_file)
     context = munge_context(config['variables'], colors)
     files = {
@@ -212,13 +200,6 @@ def generate(color_source, config_file, template_dir, theme_name):
     # Save a copy of the colors in the generated theme folder.
     with open(os.path.join(destination, 'colors.yaml'), 'w') as fh:
         yaml.dump(context, fh, default_flow_style=False)
-
-    # Save the vim color scheme.
-    #if vim:
-    #    logger.info('Saving vim colorscheme %s.vim' % theme_name)
-    #    filename = os.path.join(os.environ['HOME'], '.vim/colors/%s.vim' % theme_name)
-    #    with open(filename, 'w') as fh:
-    #        fh.write(vim)
 
 
 class ColorParser(object):
@@ -407,54 +388,6 @@ class CachedColorParser(ColorParser):
         with open(self.color_file) as fh:
             self.colors = yaml.load(fh)
         return self.colors
-
-
-#class IconUpdater(object):
-#    def __init__(self, primary_color, secondary_color):
-#        self.primary_color = primary_color
-#        self.secondary_color = secondary_color
-#
-#    def icon_path(self):
-#        return os.path.join(os.environ['HOME'], '.icons/acyl')
-#
-#    def primary_icon(self):
-#        return os.path.join(self.icon_path(), 'scalable/places/desktop.svg')#
-#
-#    def secondary_icon(self):
-#        return os.path.join(self.icon_path(), 'scalable/actions/add.svg')
-#
-#    def extract_color_svg(self, filename):
-#        regex = re.compile('stop-color:(#[\da-zA-Z]{6})')
-#        with open(filename, 'r') as fh:
-#            for line in fh.readlines():
-#               match_obj = regex.search(line)
-#                if match_obj:
-#                    return match_obj.groups()[0]
-#        raise ValueError('Unable to determine icon color.')
-
-#    def update_icons(self):
-        # Introspect a couple icon files to determine what colors are being used
-        # currently.
-#        old_primary = self.extract_color_svg(self.primary_icon())
-#        old_secondary = self.extract_color_svg(self.secondary_icon())
-#        logger.debug('Old icon colors: %s, %s' % (old_primary, old_secondary))
-
-        # Walk the icons, updating the colors in each svg file.
-#        file_count = 0
-#        for root, dirs, filenames in os.walk(self.icon_path()):
-#            for filename in filenames:
-#                if not filename.endswith('.svg'):
-#                    continue
-#                path = os.path.join(root, filename)
-#                with open(path, 'r+') as fh:
-#                    contents = fh.read()
-#                    contents = contents.replace(old_primary, self.primary_color)
-#                    contents = contents.replace(old_secondary, self.secondary_color)
-#                    fh.seek(0)
-#                    fh.write(contents)
-#                    file_count += 1
-#        logger.info('Checked %d icon files' % file_count)
-
 
 def get_parser():
     parser = optparse.OptionParser(usage='usage: %prog [options] [list|activate|generate|current|delete] theme_name [color file]')
