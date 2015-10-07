@@ -1,10 +1,11 @@
 # themer.edit
 edited version of https://github.com/coleifer 's themer
 
-Thank you coleifer for letting use use your code for the base;
+Thank you coleifer for letting us use your code for the base;
 Thanks jimble from #rice for helping with the symbolic linking;
 
 #HEAVY work in progress.  Don't expect anything to work yet, you can try if you want to though.
+
 
 this will serve as a guide for how to use themer.edit
 
@@ -13,12 +14,18 @@ this will serve as a guide for how to use themer.edit
 will generate a new theme called doughpit based on the doughpit.png file.
 
 
+
 Current functionality: when supplied with an image, it creates a i3.conf, colors.yaml, html file to display example of colors, and an xresources file.   you can use 
+
 ./themer.py activate theme_name
+
 to change to another theme.
 
+
 MAKE SURE you symbollically link your:
+
 ~/.config/i3/config to ~/.config/themer/current/i3.conf
+
 ~/.i3status.conf to ~/.config/themer/current/i3status.conf
 
 to do this, copy your current ~/.config/i3/config and ~/.i3status.conf (or whatever/wherever you have been using to edit your config thus far) as config.backup and .i3status.conf.backup (in case something goes horrifically wrong)
@@ -26,11 +33,15 @@ to do this, copy your current ~/.config/i3/config and ~/.i3status.conf (or whate
 delete the original files
 
 rm ~/.config/i3/config
+
 rm ~/.i3status.conf
+
 
 now symlink the config and i3status.conf from the ~/.config/themer/current directory to these two spots in order for it to work properly
 
+
 ln -s ~/.config/themer/current/i3.conf ~/.config/i3/config
+
 ln -s ~/.config/themer/current/i3status.conf ~/.i3status.conf
 
 
