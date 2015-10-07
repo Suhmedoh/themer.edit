@@ -6,6 +6,14 @@ Thanks jimble from #rice for helping with the symbolic linking;
 
 #HEAVY work in progress.  Don't expect anything to work yet, you can try if you want to though.
 
+#the road so far...
+
+![sunset theme](http://i.imgur.com/3U5P8iX.jpg)
+![sashimi theme](http://i.imgur.com/cKttKA7.jpg)
+![multicolorbokeh theme](http://i.imgur.com/x6tDdL2.jpg)
+![carnature theme](http://i.imgur.com/mk2piwr.jpg)
+![bluebokeh theme](http://i.imgur.com/XMpzu3l.jpg)
+
 
 this will serve as a guide for how to use themer.edit
 
