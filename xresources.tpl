@@ -4,8 +4,15 @@
 *font: xft:{{ fontName.title() }}:{{ fontSize }}
 *.cursorColor: {{ white }}
 
+
+!sets URxvt's background and foreground to transparent
 URxvt*background: {% if transparency %}[{{ transparency }}]{% endif %}{% if background %}{{ background }}{% else %}{{ black }}{% endif %}
 URxvt*foreground: {% if foreground %}{{ foreground }}{% else %}{{ white }}{% endif %}
+
+!sets the background to black and foreground to white for other terminals relying on Xresources
+*background: #000000
+*foreground: #FFFFFF
+
 ! black
 *color0: {{ black }}
 *color8: {{ alt_black }}
