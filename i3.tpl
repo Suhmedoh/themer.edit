@@ -33,7 +33,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
  
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -b -nb '{{ secondary }}' -nf '{{ background }}' -sb '{{ background }}' -sf '{{ secondary }}'
+bindsym $mod+d exec dmenu_run -b -nb '{{ background }}' -nf '{{ secondary }}' -sb '{{ secondary }}' -sf '{{ background }}'
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -160,7 +160,7 @@ set $warning {{ special }}
 bar {
     status_command    i3status
     position          top
-    workspace_buttons yes
+    workspace_buttons no
     
     font {{ font }}
 
@@ -182,15 +182,14 @@ bar {
 gaps inner 8
 gaps outer 0
  
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 -- +10% && killall -SIGUSR1 i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -- -10% && killall -SIGUSR1 i3status
+
 bindsym Print exec && scrot '%Y-%m-%d-%T_$wx$h_scrot.png' -e 'mv $f ~/Pictures/screenshots/'
  
-bindsym $mod+Shift+Print exec urxvt -hold -e bash -c bruh.sh && wait && scrot '%Y-%m-%d-%T_$wx$h_scrot_bruh.png' -e 'mv $f ~/Pictures/screenshots/'
- 
 for_window [class="^.*"] border pixel 0
- 
- 
  
 exec --no-startup-id xrandr --output HDMI1 --left-of LVDS1 &
 exec xset -dpms s off &
 exec compton &
-exec volumeicon &
+

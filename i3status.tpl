@@ -1,11 +1,12 @@
 {# this is an "i3" specific file, for configuring my status bar -- goes in .themer/templates/i3status.tpl #}
 general {
         colors = true
-        interval = 5
+        interval = 1
         color_good = "{{ green }}"
         color_bad = "{{ red }}"
 }
 
+order += "volume master"
 order += "disk /"
 order += "run_watch DHCP"
 order += "wireless wlan0"
