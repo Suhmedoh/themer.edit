@@ -15,11 +15,24 @@ Thanks jimble from #rice for helping with the symbolic linking;
 ![bluebokeh theme](http://i.imgur.com/XMpzu3l.jpg)
 
 
+if anyone wants to test this so far and see what works and what doesn't, message me on reddit(/u/suhmedoh) and let me know how it goes or open an issue, or check irc.freenode.net #doughpit and talk to me on there (nick is either jiaxsun or jiaxsun_)
+
+
+Not sure exactly what works so far and what doesn't for anyone else's machine, but for mine:
+
+./themer.py generate samurai ~/Pictures/background/samurai.png
+
+will set the background on all monitors, create and set the xresource file(works with urxvt, haven't tried other terminals yet), sets i3gaps with the gaps I like, no borders or scroll bars, sets i3status/bar to use the color scheme generated, sets dmenu to use the color scheme.
+
+
+IF dmenu no longer shows any of your applications(happened to me randomly, not sure what caused it) try deleting ~/.cache/dmenu_run
+
+
 this will serve as a guide for how to use themer.edit
 
 ./themer generate new_theme ~/Pictures/background/doughpit.png
 
-will generate a new theme called doughpit based on the doughpit.png file.
+will generate a new theme called doughpit based on the doughpit.png file.  Run the same command again to change the order of the colors(might also give you different colors?)
 
 
 
