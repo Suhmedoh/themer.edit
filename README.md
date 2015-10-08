@@ -15,6 +15,16 @@ Thanks jimble from #rice for helping with the symbolic linking;
 ![bluebokeh theme](http://i.imgur.com/XMpzu3l.jpg)
 
 
+PREREQS:
+i3-gaps [by Airblader](https://github.com/Airblader/i3)
+
+feh (fedora: sudo dnf install feh) (ubuntu?: sudo apt-get install feh?)
+
+some version or python, i'll figure out which later
+
+should be it, will hopefully be adding an option to pick background manager fo those who want to use something else, like nitrogen
+
+
 if anyone wants to test this so far and see what works and what doesn't, message me on reddit(/u/suhmedoh) and let me know how it goes or open an issue, or check irc.freenode.net #doughpit and talk to me on there (nick is either jiaxsun or jiaxsun_)
 
 
