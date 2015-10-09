@@ -25,6 +25,13 @@ some version or python, i'll figure out which later
 should be it, will hopefully be adding an option to pick background manager fo those who want to use something else, like nitrogen
 
 
+##Just did a fresh install of Fedora 22 64bit Workstation, will be seeing how easy it is to get this running from scratch.
+
+>fresh install; installed weechat.
+>got i3-gaps from [Airblader's github page](https://github.com/Airblader/i3)
+>installed dependencies as told by wiki page
+>sudo dnf upgrade, waiting to finish, will check more tomorrow
+
 if anyone wants to test this so far and see what works and what doesn't, message me on reddit(/u/suhmedoh) and let me know how it goes or open an issue, or check irc.freenode.net #doughpit and talk to me on there (nick is either jiaxsun or jiaxsun_)
 
 
