@@ -30,7 +30,7 @@ should be it, will hopefully be adding an option to pick background manager fo t
 >fresh install; installed weechat.
 >got i3-gaps from [Airblader's github page](https://github.com/Airblader/i3)
 >installed dependencies as told by wiki page
->sudo dnf upgrade, waiting to finish, will check more tomorrow
+>sudo dnf upgrade, restarting into i3-gaps now
 
 if anyone wants to test this so far and see what works and what doesn't, message me on reddit(/u/suhmedoh) and let me know how it goes or open an issue, or check irc.freenode.net #doughpit and talk to me on there (nick is either jiaxsun or jiaxsun_)
 
