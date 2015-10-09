@@ -28,8 +28,9 @@ should be it, will hopefully be adding an option to pick background manager fo t
 ##Just did a fresh install of Fedora 22 64bit Workstation, will be seeing how easy it is to get this running from scratch.
 
 >fresh install; installed weechat.
->got i3-gaps from [Airblader's github page](https://github.com/Airblader/i3)
 >installed dependencies as told by wiki page
+>installed urxvt for terminal (sudo dnf install rxvt-unicode)
+>got i3-gaps from [Airblader's github page](https://github.com/Airblader/i3) follow his instructions for installing
 >sudo dnf upgrade, restarting into i3-gaps now
 
 if anyone wants to test this so far and see what works and what doesn't, message me on reddit(/u/suhmedoh) and let me know how it goes or open an issue, or check irc.freenode.net #doughpit and talk to me on there (nick is either jiaxsun or jiaxsun_)
