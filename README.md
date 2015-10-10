@@ -125,31 +125,6 @@ Will delete the theme named bad_theme.
 IF dmenu no longer shows any of your applications(happened to me randomly, not sure what caused it) try deleting ~/.cache/dmenu_run
 
 
-MAKE SURE you symbollically link your:
-
->~/.config/i3/config to ~/.config/themer/current/i3.conf
->
->~/.i3status.conf to ~/.config/themer/current/i3status.conf
-
-to do this, copy your current ~/.config/i3/config and ~/.i3status.conf (or whatever/wherever you have been using to edit your config thus far) as config.backup and .i3status.conf.backup (in case something goes horrifically wrong)
-
-delete the original files
-
->rm ~/.config/i3/config
->
->rm ~/.i3status.conf
-
-
-now symlink the config and i3status.conf from the ~/.config/themer/current directory to these two spots in order for it to work properly
-
-
->ln -s ~/.config/themer/current/i3.conf ~/.config/i3/cnofig
->
->ln -s ~/.config/themer/current/i3status.conf ~/.i3status.conf
-
-
-
-
 ###(eventual) to do list:
 
 
