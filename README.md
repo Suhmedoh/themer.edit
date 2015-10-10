@@ -14,6 +14,10 @@ Thanks jimble from #rice for helping with the symbolic linking;
 ![carnature theme](http://i.imgur.com/mk2piwr.jpg)
 ![bluebokeh theme](http://i.imgur.com/XMpzu3l.jpg)
 
+###webm of it in action
+
+![showcase](https://my.mixtape.moe/qbjwqc.webm)
+
 
 PREREQS:
 i3-gaps [by Airblader](https://github.com/Airblader/i3)
