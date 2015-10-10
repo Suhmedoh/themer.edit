@@ -1,5 +1,6 @@
 # this yaml config file goes in .themer/templates/i3/config.yaml
 variables:
+  theme: theme_name
   primary: magenta
   secondary: green
   tertiary: red
@@ -13,3 +14,4 @@ files:
   index.tpl: index.html
   i3status.tpl: i3status.conf
   i3.tpl: i3.conf
+  bashrc.tpl: bashrc

@@ -1,11 +1,19 @@
 {# belongs in .themer/templates/i3/xresources.tpl #}
 *faceName: {{ fontName.title() }}
 *faceSize: {{ fontSize }}
-*font: xft:{{ fontName.title() }}:{{ fontSize }}
+*font: -misc-fixed-*-*-*-*-12-*-*-*-*-*-*-*
+*boldFont: -misc-fixed-*-*-*-*-12-*-*-*-*-*-*-*
 *.cursorColor: {{ white }}
+*.scrollBar: false
 
+URxvt.perl-ext-common : default,matcher
+URxvt.urlLauncher     : firefox
+URxvt.matcher.button  : 1
 
-!sets URxvt's background and foreground to transparent
+URxvt.transparent:   true
+URxvt.tintColor:     {{ white }}
+URxvt.shading:       20 
+
 URxvt*background: {% if transparency %}[{{ transparency }}]{% endif %}{% if background %}{{ background }}{% else %}{{ black }}{% endif %}
 URxvt*foreground: {% if foreground %}{{ foreground }}{% else %}{{ white }}{% endif %}
 

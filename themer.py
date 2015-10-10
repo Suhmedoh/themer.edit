@@ -41,7 +41,7 @@ DEFAULT_CONTEXT_CONFIG = {
     'secondary': 'green',
     'tertiary': 'blue',
 }
-CONFIG_DIR = os.getenv('XDG_CONFIG_HOME', os.path.join(os.getenv('HOME'), '.config'))
+CONFIG_DIR = os.getenv('$XDG_CONFIG_HOME', os.path.join(os.getenv('HOME'), '.config'))
 THEMER_ROOT = os.path.join(CONFIG_DIR, 'themer')
 TEMPLATE_ROOT = os.path.join(THEMER_ROOT, 'templates')
 
@@ -169,6 +169,7 @@ def activate(theme_name):
     colors = CachedColorParser(color_file).read()
     wallfix(dest, colors)
     os.system('xrdb ~/.config/themer/current/Xresources')
+    os.system('sed -ri "s/theme_name/%s/g" ~/.config/themer/current/bashrc' % theme_name)
     os.system('i3-msg -q restart')
 
 

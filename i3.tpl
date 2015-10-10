@@ -160,7 +160,7 @@ set $warning {{ special }}
 bar {
     status_command    i3status
     position          top
-    workspace_buttons no
+    workspace_buttons yes
     
     font {{ font }}
 
