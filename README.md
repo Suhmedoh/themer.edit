@@ -16,7 +16,7 @@ Thanks jimble from #rice for helping with the symbolic linking;
 
 ###webm of it in action
 
-![showcase](https://my.mixtape.moe/qbjwqc.webm)
+[webm themer.edit](https://my.mixtape.moe/qbjwqc.webm)
 
 
 PREREQS:
