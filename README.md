@@ -129,6 +129,12 @@ Will delete the theme named bad_theme.
 IF dmenu no longer shows any of your applications(happened to me randomly, not sure what caused it) try deleting ~/.cache/dmenu_run
 
 
+###currently working on:
+
+creating a basic lemonbar which uses colors from Xresources, and generating the script for it w/ themer
+
+maybe integrating an option to choose which panel you want to create when you generate a theme
+
 ###(eventual) to do list:
 
 
