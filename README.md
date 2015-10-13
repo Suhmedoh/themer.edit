@@ -13,9 +13,9 @@ Thanks jimble from #rice for helping with the symbolic linking;
 ![bluebokeh theme](http://i.imgur.com/XMpzu3l.jpg)
 ####Beta, baby
 
-<img src="https://my.mixtape.moe/kbyrul.png" alt="alt text" title="Title" />
+![pulpfiction](https://u.teknik.io/kbCtjp.png)
 
-<img src="https://my.mixtape.moe/bmxcfa.png" alt="alt text" title="Title" />
+![adele](https://u.teknik.io/K9rHiH.png)
 
 the lemon bar is in the pulpfiction theme, it sticks to the background directly about the top most window, with a similar bg color to the terminals.
 
