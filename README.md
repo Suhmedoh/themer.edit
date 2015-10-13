@@ -13,9 +13,12 @@ Thanks jimble from #rice for helping with the symbolic linking;
 ![bluebokeh theme](http://i.imgur.com/XMpzu3l.jpg)
 ####Beta, baby
 
-![pulpfiction](https://u.teknik.io/kbCtjp.png)
+screenshots are too beautiful(read: too big) for github to handle, check the links
 
-![adele](https://u.teknik.io/K9rHiH.png)
+[Pulp Fiction Lemonbar]https://my.mixtape.moe/bmxcfa.png 
+
+[Adele(From Blue is the Warmest Color) i3 bar]https://my.mixtape.moe/kbyrul.png
+
 
 the lemon bar is in the pulpfiction theme, it sticks to the background directly about the top most window, with a similar bg color to the terminals.
 
