@@ -8,10 +8,12 @@ variables:
   transparency: 85
   fontName: terminus
   fontSize: 12
-  font: "-*-terminus-*-*-*-*-12-*-*-*-*-*-*-*"
+  font: "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
 files:
   xresources.tpl: Xresources
   index.tpl: index.html
-  i3status.tpl: i3status.conf
-  i3.tpl: i3.conf
+  i3.conf: i3.conf
   bashrc.tpl: bashrc
+  bar.tpl: bar.sh
+  rlb: rlb
+  

@@ -7,16 +7,31 @@ Thanks jimble from #rice for helping with the symbolic linking;
 ###HEAVY work in progress.  Don't expect anything to work yet, you can try if you want to though.
 
 ###the road so far...
-
-![sunset theme](http://i.imgur.com/3U5P8iX.jpg)
-![sashimi theme](http://i.imgur.com/cKttKA7.jpg)
+####screenshots from the alpha
 ![multicolorbokeh theme](http://i.imgur.com/x6tDdL2.jpg)
 ![carnature theme](http://i.imgur.com/mk2piwr.jpg)
 ![bluebokeh theme](http://i.imgur.com/XMpzu3l.jpg)
+####Beta, baby
+![adele theme](https://my.mixtape.moe/kbyrul.png)
+![pulp fiction theme](https://my.mixtape.moe/bmxcfa.png)
+
+the lemon bar is in the pulpfiction theme, it sticks to the background directly about the top most window, with a similar bg color to the terminals.
+
+the i3 bar is across both screens on the top of the first image.
 
 ###webm of it in action
 
 [webm themer.edit](https://my.mixtape.moe/qbjwqc.webm)
+
+
+#WOAH NELLY
+##first major update, now supports creating a theme with either i3 or lemonbar
+
+use 
+
+>./themer.py -l generate lemon_theme ~/lemon_bg.png
+
+to generate a theme with a simple lemonbar to match the console (still have to work on matching to color of the transparency to the terminal)
 
 
 PREREQS:
@@ -27,6 +42,8 @@ i3status (sudo dnf install i3status)
 python-yaml and python-jinja2 (sudo dnf install python-yaml python-jinja2
 
 feh (fedora: sudo dnf install feh)
+
+OPTIONAL: [lemonbar](https://github.com/LemonBoy/bar) if you want to generate a lemonbar in your theme
 
 
 
@@ -97,9 +114,15 @@ disclaimer: I will only discuss the options i'm currently workign on, I take no 
 >find a directory you want to store these files in eg. ~/rice
 >git clone http://github.com/suhmedoh/themer.edit
 >
->create a new directory ~/.config/themer/templates/i3/
->copy(or move; i recommend copying so you have a copy of the originals if you screw somethign up) all of the files except themer.py to that directory
+>create a new directory ~/.config/themer/templates/
+>copy(or move; i recommend copying so you have a copy of the originals if you screw somethign up) /i3/ and /lemon/ to there (~/.config/themer/templates/i3 and ~/.config/themer/templates/lemon are the new directories)
 >
+
+>ln -s ~/.config/themer/current/i3.conf ~/.config/i3/config
+>
+>ln -s ~/.config/themer/current/i3status.conf ~/.i3status.conf
+>
+
 
 #####themer.py options
 
@@ -107,10 +130,19 @@ disclaimer: I will only discuss the options i'm currently workign on, I take no 
 >./themer.py activate
 >./themer.py list
 >./themer.py delete
+>./themer.py -d, -t
+
+>./themer.py -d
+
+enables debugging, making it easier to see what when wrong/what's happening
+
+>./themer.py -t 
+
+can be given either -t lemon or -t i3 (defaults to i3 when no option given), chooses which panel for the theme
 
 >./themer.py generate samurai ~/Pictures/background/samurai.png
 
-will create a theme which sets the background on all monitors, creates and sets the xresource file(works with urxvt, haven't tried other terminals yet), sets i3gaps with the gaps I like, no borders or scroll bars, sets i3status/bar to use the color scheme generated, sets dmenu to use the color scheme.  After running this, give it time to complete, then it will ask you if you want to activate the theme or not.
+will create a theme which sets the background on all monitors, creates and sets the xresource file(works with urxvt, haven't tried other terminals yet), sets i3gaps with the gaps I like, no borders or scroll bars, sets i3status/bar to use the color scheme generated, sets dmenu to use the color scheme.  After running this, give it time to complete, then it will ask you if you want to activate the theme or not
 
 >./themer.py activate bokeh
 
@@ -118,11 +150,11 @@ Will activate the already generated theme bokeh.  This will switch your i3 confi
 
 >./themer.py list
 
-will generate a list of themes, which you can then run ./themer.py activate *theme* to use.
+will generate a list of themes, which you can then run ./themer.py activate *theme* to use
 
 >./themer.py delete bad_theme
 
-Will delete the theme named bad_theme.
+Will delete the theme named bad_theme
 
 
 #### problems I have run into(may be unrelated)
@@ -131,9 +163,9 @@ IF dmenu no longer shows any of your applications(happened to me randomly, not s
 
 ###currently working on:
 
-creating a basic lemonbar which uses colors from Xresources, and generating the script for it w/ themer
+done ~~creating a basic lemonbar which uses colors from Xresources, and generating the script for it w/ themer~~
 
-maybe integrating an option to choose which panel you want to create when you generate a theme
+done, can use i3 or lemonbar, more options ~later ~~maybe integrating an option to choose which panel you want to create when you generate a theme~~
 
 ###(eventual) to do list:
 
@@ -142,7 +174,7 @@ generate themes for other tiling WMs(if possible?)
 
 generate themes for text editors (sublime, emacs, vim)
 
-generate themes for panels (tint2, i3status, pystatus)
+generate themes for panels (~~lemonbar~~ tint2, i3status, pystatus)
 
 generate themes for dmenu and it's alternatives
 

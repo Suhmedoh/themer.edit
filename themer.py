@@ -168,9 +168,15 @@ def activate(theme_name):
     color_file = os.path.join(dest, 'colors.yaml')
     colors = CachedColorParser(color_file).read()
     wallfix(dest, colors)
+    if lemonbar == True:
+        os.system('killall lemonbar')
+        os.system('cp ~/.config/themer/templates/lemon/lemonbar ~/.config/themer/current/')
+        os.system('chmod +x ~/.config/themer/current/rlb ~/.config/themer/current/bar.sh ~/.config/themer/current/lemonbar')
+        os.system('~/.config/themer/current/rlb &')
     os.system('xrdb ~/.config/themer/current/Xresources')
     os.system('sed -ri "s/theme_name/%s/g" ~/.config/themer/current/bashrc' % theme_name)
     os.system('i3-msg -q restart')
+
 
 
 
@@ -396,7 +402,8 @@ def get_parser():
     parser.add_option('-c', '--config', dest='config_file', default='config.yaml')
     parser.add_option('-a', '--activate', dest='activate', action='store_true')
     parser.add_option('-v', '--verbose', dest='verbose', action='store_true')
-    parser.add_option('-d', '--debug', dest='debug', action='store_true')
+    parser.add_option('-d', '--debug', dest='debug', default='store_true')
+    parser.add_option('-l', '--lemonbar', dest='lemonbar', action='store_true')
     return parser
 
 def panic(msg):
@@ -441,11 +448,17 @@ if __name__ == '__main__':
     if options.debug:
         logger.setLevel(logging.DEBUG)
 
+    if options.template_dir == 'lemon':
+        lemonbar = True
+    else:
+        lemonbar = False
+
     if action == 'activate':
         activate(theme_name)
     elif action == 'delete':
         shutil.rmtree(os.path.join(THEMER_ROOT, theme_name))
         logger.info('Removed %s' % theme_name)
+ 
     else:
         # Find the appropriate yaml config file and load it.
         template_dir = os.path.join(TEMPLATE_ROOT, options.template_dir)
