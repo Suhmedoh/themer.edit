@@ -14,12 +14,12 @@ URxvt.transparent:   true
 URxvt.tintColor:     {{ white }}
 URxvt.shading:       20 
 
-URxvt*background: {% if transparency %}[{{ transparency }}]{% endif %}{% if background %}{{ background }}{% else %}{{ black }}{% endif %}
-URxvt*foreground: {% if foreground %}{{ foreground }}{% else %}{{ white }}{% endif %}
+URxvt*background: {{ black }}
+URxvt*foreground: {{ white }}
 
 !sets the background to black and foreground to white for other terminals relying on Xresources
-*background: #000000
-*foreground: #FFFFFF
+*background: {{ black }}
+*foreground: {{ white }}
 
 ! black
 *color0: {{ black }}

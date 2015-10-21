@@ -168,14 +168,17 @@ def activate(theme_name):
     color_file = os.path.join(dest, 'colors.yaml')
     colors = CachedColorParser(color_file).read()
     wallfix(dest, colors)
-    if lemonbar == True:
-        os.system('killall lemonbar')
+
+    os.system('xrdb ~/.config/themer/current/Xresources')
+    os.system('sed -ri "s/theme_name/%s/g" ~/.config/themer/current/bashrc' % theme_name)
+    os.system('sed -ri "s/theme_name/%s/g" ~/.config/themer/current/startpage.html' % theme_name)
+    os.system('i3-msg -q restart')
+    os.system('killall lemonbar')
+    if (lemonbar == True) or theme_name.endswith('-l'):
         os.system('cp ~/.config/themer/templates/lemon/lemonbar ~/.config/themer/current/')
         os.system('chmod +x ~/.config/themer/current/rlb ~/.config/themer/current/bar.sh ~/.config/themer/current/lemonbar')
         os.system('~/.config/themer/current/rlb &')
-    os.system('xrdb ~/.config/themer/current/Xresources')
-    os.system('sed -ri "s/theme_name/%s/g" ~/.config/themer/current/bashrc' % theme_name)
-    os.system('i3-msg -q restart')
+
 
 
 
@@ -404,6 +407,7 @@ def get_parser():
     parser.add_option('-v', '--verbose', dest='verbose', action='store_true')
     parser.add_option('-d', '--debug', dest='debug', default='store_true')
     parser.add_option('-l', '--lemonbar', dest='lemonbar', action='store_true')
+    parser.add_option('-s', '--startpage', dest='startpage', action='store_true')
     return parser
 
 def panic(msg):
@@ -452,6 +456,11 @@ if __name__ == '__main__':
         lemonbar = True
     else:
         lemonbar = False
+
+    if options.startpage == True:
+        startpage = True
+    else:
+        startpage = False
 
     if action == 'activate':
         activate(theme_name)
