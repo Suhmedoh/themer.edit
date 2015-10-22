@@ -9,7 +9,9 @@ Thanks jimble from #rice for helping with the symbolic linking;
 ###the road so far...
 Screenshots will now be on my github page,
 VVVVVVVVVVVVVVV
-http://suhmedoh.github.io
+
+##http://suhmedoh.github.io
+
 ^^^^^^^^^^^^^^^
 ###webm of it in action
 
@@ -125,7 +127,7 @@ disclaimer: I will only discuss the options i'm currently workign on, I take no 
 >./themer.py activate
 >./themer.py list
 >./themer.py delete
->./themer.py -d, -t
+>./themer.py -d, -t, -s, -t
 
 >./themer.py -d
 
@@ -135,9 +137,18 @@ enables debugging, making it easier to see what when wrong/what's happening
 
 can be given either -t lemon or -t i3 (defaults to i3 when no option given), chooses which panel for the theme
 
->./themer.py generate samurai ~/Pictures/background/samurai.png
+>./themer.py -s
 
-will create a theme which sets the background on all monitors, creates and sets the xresource file(works with urxvt, haven't tried other terminals yet), sets i3gaps with the gaps I like, no borders or scroll bars, sets i3status/bar to use the color scheme generated, sets dmenu to use the color scheme.  After running this, give it time to complete, then it will ask you if you want to activate the theme or not
+will generate MY firefox startpage.  You can edit the startpage.tpl to change what links get generated, you also need the firefox new tab override addon, and you simply set it to point at 
+~/.config/themer/current/startpage.html
+
+>./themer.py -t
+
+stands for template.  You can omit it to generate i3status bar, or use -t lemon to generate a lemon bar.  IMPORTANT: when generating the theme, it should spawn the lemonbar for you, but if you want it to start the bar when you activate the theme after switching from it previously (ie. you make the theme, switch to an i3status theme, then switch back to a lemonbar theme) you need to either name your theme with -l at the end (./themer.py -s -t lemon generate cool_lemon_theme-l ~/backgrounds/lemoney.png) or use the -t lemon flag when activating the theme (./themer.py -t lemon activate lemon_theme).  will work on fixing this in the future.
+
+>./themer.py -s generate samurai ~/Pictures/background/samurai.png
+
+will create a theme which sets the background on all monitors, creates and sets the xresource file(works with urxvt, haven't tried other terminals yet), sets i3gaps with the gaps I like, no borders or scroll bars, sets i3status/bar to use the color scheme generated, sets dmenu to use the color scheme, and generates a firefox startpage.  After running this, give it time to complete, then it will ask you if you want to activate the theme or not
 
 >./themer.py activate bokeh
 
