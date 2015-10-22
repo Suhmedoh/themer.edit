@@ -7,27 +7,17 @@ Thanks jimble from #rice for helping with the symbolic linking;
 ###HEAVY work in progress.  Don't expect anything to work yet, you can try if you want to though.
 
 ###the road so far...
-####screenshots from the alpha
-![multicolorbokeh theme](http://i.imgur.com/x6tDdL2.jpg)
-![carnature theme](http://i.imgur.com/mk2piwr.jpg)
-![bluebokeh theme](http://i.imgur.com/XMpzu3l.jpg)
-####Beta, baby
-
-screenshots are too beautiful(read: too big) for github to handle, check the links
-
-[Pulp Fiction Lemonbar]https://my.mixtape.moe/bmxcfa.png 
-
-[Adele(From Blue is the Warmest Color) i3 bar]https://my.mixtape.moe/kbyrul.png
-
-
-the lemon bar is in the pulpfiction theme, it sticks to the background directly about the top most window, with a similar bg color to the terminals.
-
-the i3 bar is across both screens on the top of the first image.
-
+Screenshots will now be on my github page,
+VVVVVVVVVVVVVVV
+http://suhmedoh.github.io
+^^^^^^^^^^^^^^^
 ###webm of it in action
 
 [webm themer.edit](https://my.mixtape.moe/qbjwqc.webm)
 
+
+
+###
 
 #WOAH NELLY
 ##first major update, now supports creating a theme with either i3 or lemonbar
