@@ -7,13 +7,13 @@ variables:
   special: yellow
   transparency: 85
   fontName: terminus
-  fontSize: 12
-  font: "-*-terminus-*-*-*-*-12-*-*-*-*-*-*-*"
+  fontSize: 10
+  font: "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
 files:
   xresources.tpl: Xresources
   index.tpl: index.html
   i3status.conf: i3status.conf
   i3.conf: i3.conf
   bashrc.tpl: bashrc
-  
+  startpage.tpl : startpage.html
   

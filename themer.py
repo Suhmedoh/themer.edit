@@ -174,6 +174,7 @@ def activate(theme_name):
     os.system('sed -ri "s/theme_name/%s/g" ~/.config/themer/current/startpage.html' % theme_name)
     os.system('i3-msg -q restart')
     os.system('killall lemonbar')
+    os.system('relcomp')
     if (lemonbar == True) or theme_name.endswith('-l'):
         os.system('cp ~/.config/themer/templates/lemon/lemonbar ~/.config/themer/current/')
         os.system('chmod +x ~/.config/themer/current/rlb ~/.config/themer/current/bar.sh ~/.config/themer/current/lemonbar')

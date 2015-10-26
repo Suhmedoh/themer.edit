@@ -6,16 +6,16 @@
 *.cursorColor: {{ white }}
 *.scrollBar: false
 
-URxvt.perl-ext-common : default,matcher
-URxvt.urlLauncher     : firefox
+URxvt.urlLauncher     : /usr/bin/firefox
 URxvt.matcher.button  : 1
+URxvt.perl-ext-common: ...,url-select
+URxvt.keysym.M-u: perl:url-select:select_next
 
-URxvt.transparent:   true
+
+URxvt.transparent:   false
 URxvt.tintColor:     {{ white }}
-URxvt.shading:       20 
+URxvt.shading:       20
 
-URxvt*background: {{ black }}
-URxvt*foreground: {{ white }}
 
 !sets the background to black and foreground to white for other terminals relying on Xresources
 *background: {{ black }}

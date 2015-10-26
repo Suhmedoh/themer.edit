@@ -5,9 +5,9 @@ variables:
   secondary: green
   tertiary: red
   special: yellow
-  transparency: 85
+  shading: term_trans
   fontName: terminus
-  fontSize: 12
+  fontSize: 10
   font: "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
 files:
   xresources.tpl: Xresources
@@ -16,4 +16,4 @@ files:
   bashrc.tpl: bashrc
   bar.tpl: bar.sh
   rlb: rlb
-  
+  startpage.tpl : startpage.html

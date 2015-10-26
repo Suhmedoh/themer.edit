@@ -1,3 +1,3 @@
 #!/bin/bash
 
-~/.config/themer/current/bar.sh | ~/.config/themer/current/lemonbar -d -g "1872x20+24+4" -B '#d5000000' -f '-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*' 
+~/.config/themer/current/bar.sh | ~/.config/themer/current/lemonbar -d -g "1872x20+24+4" -B '{{ black }}' -f '-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*' 

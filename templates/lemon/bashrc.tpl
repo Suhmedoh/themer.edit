@@ -10,4 +10,6 @@ fi
 
 # User specific aliases and functions
 
-PS1='\[\e[1;31m\] ░▒▓█ \[\e[1;32m\]theme_name\[\e[1;31m\] █▓▒░\[\e[1;34m\] \W × \[\e[0m\]'
+PS1='\[\e[1;31m\] ░▒▓█\[\e[1;32m\]theme_name\[\e[1;31m\]█▓▒░\[\e[1;34m\] \W × \[\e[0m\]'
+
+alias relcomp="pkill compton && compton --config ~/.config/compton.conf -cb"

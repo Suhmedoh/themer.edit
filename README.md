@@ -3,11 +3,15 @@ edited version of https://github.com/coleifer 's themer
 
 Thank you coleifer for letting us use your code for the base;
 Thanks jimble from #rice for helping with the symbolic linking;
+Shoutout to #rice for all their constructive criticism and helping me without complaining too much.
 
-###HEAVY work in progress.  Don't expect anything to work yet, you can try if you want to though.
+###~~HEAVY work in progress.  Don't expect anything to work yet, you can try if you want to though.~~
+
+Still a WIP, but it's worked for a couple people who've tried it.  Submit bugs and issues!
 
 ###the road so far...
 Screenshots will now be on my github page,
+
 VVVVVVVVVVVVVVV
 
 ##http://suhmedoh.github.io
@@ -15,7 +19,7 @@ VVVVVVVVVVVVVVV
 ^^^^^^^^^^^^^^^
 ###webm of it in action
 
-[webm themer.edit](https://my.mixtape.moe/qbjwqc.webm)
+[webm themer.edit](https://my.mixtape.moe/pibool.webm)
 
 
 
@@ -41,6 +45,8 @@ python-yaml and python-jinja2 (sudo dnf install python-yaml python-jinja2
 feh (fedora: sudo dnf install feh)
 
 OPTIONAL: [lemonbar](https://github.com/LemonBoy/bar) if you want to generate a lemonbar in your theme
+
+[compton](https://github.com/chjj/compton) if you want to take advantage of the compton config and make your own.
 
 
 
@@ -73,7 +79,7 @@ this is a play by play of how it went
 >
 >make a ~/.xinitrc file, should have the lines
 >
->#!/usr/bin/bash
+>\#!/usr/bin/bash
 >exec i3
 >
 
@@ -106,7 +112,7 @@ after making a theme, you can go into ~/.config/themer/theme_name and edit the x
 if anyone wants to test this so far and see what works and what doesn't, message me on reddit(/u/suhmedoh) and let me know how it goes or open an issue, or check irc.freenode.net #doughpit and talk to me on there (nick is either jiaxsun or jiaxsun_)
 
 ## HOW TO USE THEMER.PY
-disclaimer: I will only discuss the options i'm currently workign on, I take no resposibility if other things don't work or break
+disclaimer: I will only discuss the options i'm currently working on, I take no resposibility if other things don't work or break
 
 >find a directory you want to store these files in eg. ~/rice
 >git clone http://github.com/suhmedoh/themer.edit
@@ -119,6 +125,10 @@ disclaimer: I will only discuss the options i'm currently workign on, I take no 
 >
 >ln -s ~/.config/themer/current/i3status.conf ~/.i3status.conf
 >
+
+FOR COMPTON
+
+>ln -s ~/.config/themer/current/compton.conf ~/.config/compton.conf
 
 
 #####themer.py options
@@ -180,15 +190,17 @@ generate themes for other tiling WMs(if possible?)
 
 generate themes for text editors (sublime, emacs, vim)
 
-generate themes for panels (~~lemonbar~~ tint2, i3status, pystatus)
+generate themes for panels (~~lemonbar~~ tint2, ~~i3status~~, pystatus)
 
-generate themes for dmenu and it's alternatives
+generate themes for program launchers(dmenu, demnu2, rofi, lighthouse)
 
-generate themes for irc clients
+generate themes for irc clients(does by default; maybe independent themes?)
 
 generate stylish firefox css based off twily's(?)
 
-generate colorschemes for different terminals (termite, lilyterm, etc)
+generate ~~start pages~~(done, can edit teh template to use your own links)
+
+generate ~~colorschemes for different terminals~~ (should already work for any terminal using Xresources)
 
 generate color schemes for other popular apps( suggestions?)
 

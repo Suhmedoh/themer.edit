@@ -7,15 +7,19 @@
 *.scrollBar: false
 
 URxvt.perl-ext-common : default,matcher
-URxvt.urlLauncher     : firefox
+URxvt.urlLauncher     : /usr/bin/firefox
 URxvt.matcher.button  : 1
 
 URxvt.transparent:   true
-URxvt.tintColor:     {{ black }}
+URxvt.tintColor:     {{ white }}
 URxvt.shading:       20 
 
-*background: {{ black }}
-*foreground: {{ white }}
+URxvt*background: {% if transparency %}[{{ transparency }}]{% endif %}{% if background %}{{ background }}{% else %}{{ black }}{% endif %}
+URxvt*foreground: {% if foreground %}{{ foreground }}{% else %}{{ white }}{% endif %}
+
+!sets the background to black and foreground to white for other terminals relying on Xresources
+*background: #000000
+*foreground: #FFFFFF
 
 ! black
 *color0: {{ black }}
