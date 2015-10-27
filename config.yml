@@ -1,0 +1,4 @@
+files:
+    i3: /home/elder/.i3/config
+    i3status: /home/elder/.i3status.conf
+    xresources: /home/elder/xresources
