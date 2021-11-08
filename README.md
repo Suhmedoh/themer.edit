@@ -5,19 +5,19 @@ Thank you coleifer for letting us use your code for the base;
 Thanks jimble from #rice for helping with the symbolic linking;
 Shoutout to #rice for all their constructive criticism and helping me without complaining too much.
 
-###~~HEAVY work in progress.  Don't expect anything to work yet, you can try if you want to though.~~
+### ~~HEAVY work in progress.  Don't expect anything to work yet, you can try if you want to though.~~
 
 Still a WIP, but it's worked for a couple people who've tried it.  Submit bugs and issues!
 
-###the road so far...
+### the road so far...
 Screenshots will now be on my github page,
 
 VVVVVVVVVVVVVVV
 
-##http://suhmedoh.github.io
+## http://suhmedoh.github.io
 
 ^^^^^^^^^^^^^^^
-###webm of it in action
+### webm of it in action
 
 [webm themer.edit](https://my.mixtape.moe/pibool.webm)
 
@@ -25,8 +25,8 @@ VVVVVVVVVVVVVVV
 
 ###
 
-#WOAH NELLY
-##first major update, now supports creating a theme with either i3 or lemonbar
+# WOAH NELLY
+## first major update, now supports creating a theme with either i3 or lemonbar
 
 use 
 
@@ -50,7 +50,7 @@ OPTIONAL: [lemonbar](https://github.com/LemonBoy/bar) if you want to generate a 
 
 
 
-##Just did a fresh install of Fedora 22 64bit Workstation, will be seeing how easy it is to get this running from scratch.
+## Just did a fresh install of Fedora 22 64bit Workstation, will be seeing how easy it is to get this running from scratch.
 
 this is a play by play of how it went
 
@@ -74,7 +74,7 @@ this is a play by play of how it went
 >
 >did not have the option to boot into i3, ended up getting disabling gdm login and starting i3 via an xinitrc
 >
-###only do this if you can not log into an i3 session AT ALL
+### only do this if you can not log into an i3 session AT ALL
 >systemctl disable gdm
 >
 >make a ~/.xinitrc file, should have the lines
@@ -83,9 +83,9 @@ this is a play by play of how it went
 >exec i3
 >
 
-###only do the above if you can not log into an i3 session AT ALL
+### only do the above if you can not log into an i3 session AT ALL
 
-###you might need to change ownership of the themer directory(i didn't originally, I did after a fresh install)
+### you might need to change ownership of the themer directory(i didn't originally, I did after a fresh install)
 running themer.py will tell you if you get an error creating /home/your_username/.config/themer/current, if so do this
 
 >in order for themer.py to work, you may need to change ownership of the themer directory
@@ -131,7 +131,7 @@ FOR COMPTON
 >ln -s ~/.config/themer/current/compton.conf ~/.config/compton.conf
 
 
-#####themer.py options
+##### themer.py options
 
 >./themer.py generate
 >./themer.py activate
@@ -177,13 +177,13 @@ Will delete the theme named bad_theme
 IF dmenu no longer shows any of your applications(happened to me randomly, not sure what caused it) try deleting ~/.cache/dmenu_run
 
 
-###currently working on:
+### currently working on:
 
 done ~~creating a basic lemonbar which uses colors from Xresources, and generating the script for it w/ themer~~
 
 done, can use i3 or lemonbar, more options ~later ~~maybe integrating an option to choose which panel you want to create when you generate a theme~~
 
-###(eventual) to do list:
+### (eventual) to do list:
 
 
 generate themes for other tiling WMs(if possible?)
