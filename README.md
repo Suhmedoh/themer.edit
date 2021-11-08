@@ -50,7 +50,7 @@ OPTIONAL: [lemonbar](https://github.com/LemonBoy/bar) if you want to generate a 
 
 
 
-##Just did a fresh install of Fedora 22 64bit Workstation, will be seeing how easy it is to get this running from scratch.
+## Just did a fresh install of Fedora 22 64bit Workstation, will be seeing how easy it is to get this running from scratch.
 
 this is a play by play of how it went
 
